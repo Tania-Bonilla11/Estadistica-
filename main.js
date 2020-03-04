@@ -47,18 +47,17 @@ document.addEventListener("DOMContentLoaded", e=>{
         
 
 
-        } else if (de.value=="armonica") {
+        }  else if (de.value=="armonica") {
             let lista = cantidad.split(",").map(Number);
-        
-            var media_armonica;
-           
-            let sum = lista.reduce((previous, current) => current += previous);
-             summ= 1/lista;
-             armo = lista.length/sum(sumn);
-             armo = media_armonica;
-             $res.innerHTML = media_armonica;
-           
+            let ndato=0,dato=0,suma=0;
 
+            for(let i=0;i<lista.length;i++){
+              dato= 1/lista[i];
+              suma+=dato;
+              console.log(parseFloat(dato));
+              
+            }
+            $res.innerHTML = `La Desviacion Estandar es:  ${(lista.length/suma)}`;
 
         };
   
